@@ -109,13 +109,11 @@ var players = [
     starter: false
   }
 ];
-var avgOfAvgMinutes = 0;
+
+let avgOfAvgMinutes = 0;
 for(i=0; i<players.length; i++){
   avgOfAvgMinutes += players[i].avgMinutesPlayed;
-  //console.log(players[i].avgMinutesPlayed);
 }
-avgOfAvgMinutes/players.length;
-
 
 // * Print the average playing time of the players.
 console.log(`Avg playing time of players: \n\t${avgOfAvgMinutes/players.length}\n` );
@@ -140,15 +138,15 @@ console.log(`Bench Avg Minutes: \n\t${benchMinAvg/(players.length-5)}\n`);
 
 
 // * Create an array of the names of each player.
-names = players.map(function(player){return player.name});
+let names = players.map(function(player){return player.name});
 console.log(`Players: \n${names}\n`);
 
 // * Create an array of the names of the players who average more than 10 points per game.
-doubleDigitScorers = players.filter(player => (player.avgPoints >= 10));
+let doubleDigitScorers = players.filter(player => (player.avgPoints >= 10));
 console.log(`Double Digit Scoers:\n\t${doubleDigitScorers.map(player => player.name)} \n`);
 
 // * Create an array of the names of the players who average more than 5 rebounds per game.
-fiveRebounders = players.filter(player => (player.avgRebounds > 5));
+let fiveRebounders = players.filter(player => (player.avgRebounds > 5));
 console.log(`Players with more than 5 rebounds:\n\t${fiveRebounders.map(player => player.name)} \n`);
 
 
