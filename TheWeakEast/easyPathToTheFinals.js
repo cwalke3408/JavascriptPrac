@@ -118,7 +118,7 @@ avgOfAvgMinutes/players.length;
 
 
 // * Print the average playing time of the players.
-//console.log(avgOfAvgMinutes/players.length );
+console.log(`Avg playing time of players: \n\t${avgOfAvgMinutes/players.length}\n` );
 
 // * Print the average playing time of the starters.
 let avgOfStarterAvgMinutes = 0;
@@ -128,7 +128,7 @@ const starters = players.filter(function (player) {
         return player;
     }
 });
-console.log(avgOfStarterAvgMinutes/starters.length);
+console.log(`Starter Avg Minutes: \n\t${avgOfStarterAvgMinutes/starters.length}\n`);
     
     
 // * Print the average playing time of the bench players.
@@ -136,7 +136,7 @@ let benchMinAvg = 0;
 const bench = players.filter(function(player){
      return benchMinAvg += player.avgMinutesPlayed;
 });
-console.log(benchMinAvg/(players.length-5));
+console.log(`Bench Avg Minutes: \n\t${benchMinAvg/(players.length-5)}\n`);
 
 
 // * Create an array of the names of each player.
@@ -153,11 +153,13 @@ console.log(`Players with more than 5 rebounds:\n\t${fiveRebounders.map(player =
 
 
 // * Who is the player with the most points per minute played? Write a program to find that out.
-let highestSPM = null;
-highestSPM = players.forEach(function(player){
-    if(player.avgPoints > highestSPM.avgPoints || highestSPM == null) highestSPM = player;
+let highestSPM = players.pop();
+players.forEach(function(player){
+  if((player.avgPoints/player.avgMinutesPlayed) > (highestSPM.avgPoints/highestSPM.avgMinutesPlayed)) highestSPM = player;
 });
-console.log(highestSPM);
+console.log(`Player with most points per minute: \n\t${highestSPM.name}\n `);
 
 
 // * Based on this data, what is the average points score for the team as a whole?
+let teamPointsAvg = players.reduce((points, player) => points + player.avgPoints, 0);
+console.log(`Team avg points: \n\t${teamPointsAvg}\n`);
