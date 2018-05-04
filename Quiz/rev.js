@@ -1,3 +1,4 @@
+// Check Github Contributions
 
 function reverse(str){
     let reverseArr = [];
