@@ -42,8 +42,12 @@ let colors = [
     },
 ]
 
-let ans = colors.filter(function(elem){
-    return (elem.b > 100 && elem.g > 100);
-});
+// let ans = colors.filter(function(elem){
+//     return (elem.b > 100 && elem.g > 100);
+// });
+
+let ans = colors.filter(elem =>
+    (elem.b > 100 && elem.g > 100)
+);
 console.log(ans);
 
