@@ -17,6 +17,10 @@ div{
     background-color: darkorange;
 }
 
+.winning-square{
+    background-color: darkcyan;
+    color: coral;
+}
+
 #message{
-    
 }
