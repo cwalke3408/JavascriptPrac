@@ -4,7 +4,19 @@ div{
 
 }
 
-button{
+.space{
     /* position: absolute; */
+    background-color: #fff;
+    border: 2px #000 solid;
+    /* width: 185px;
+    height: 185px;
+    font-size: 60px; */
+}
+
+.space:hover{
+    background-color: darkorange;
+}
+
+#message{
     
 }
