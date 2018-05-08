@@ -21,7 +21,7 @@ $(document).ready(function(){
             movieData.results.forEach(movie => {
                 const poster = `${imageBaseUrl}w300/${movie.poster_path}`
                 nowPlayingHTML += 
-                    ` <div class="col-sm-3">
+                    `<div class="col-sm-3">
                         <img src="${poster}" />
                     </div>`
             });
