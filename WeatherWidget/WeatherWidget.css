@@ -1,0 +1,37 @@
+body{
+    background-color: maroon;
+}
+
+#weather-form{
+    background-color: rgb(51, 51, 51);
+    border-radius: 4px; 
+    text-align: center;
+    top: 100%;
+}
+
+#weather-form input{
+    /* display: block; */
+    width: 100%;
+    margin: 5px 0px;
+}
+
+#weather-form button{
+    margin-bottom: 5px;
+}
+
+#weather-info{
+    background-color: darkgrey;
+    text-align: center;
+    border-radius: 4px;
+    opacity: .9;
+}
+
+.a{
+    background-color: lime;
+}
+.b{
+    background-color: lightyellow;
+}
+.b2{
+    background-color: lightseagreen;
+}

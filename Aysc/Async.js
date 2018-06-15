@@ -14,6 +14,9 @@ setTimeout(() =>{
     console.log("I am third");
 }, 100);
 
+
+// JS runs this this this ...
+// wait 0 (I come back to you)
 for(let i = 0; i < 100001; i++){
     if(i === 100000){
         console.log("I am forth");

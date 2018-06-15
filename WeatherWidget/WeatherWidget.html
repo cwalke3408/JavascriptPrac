@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="apiKeyConfig.js"></script>
     <script src="WeatherWidget.js"></script>
 <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -14,20 +15,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="WeatherWidget.css">
 
 </head>
 <body>
 
     <div class="container">
-        <form id="weather-form">
-        <label>Please enter a city to search for</label>
-        <input type="text" id="city" placeholder="Atlanta" />
-        <button class="btn btn-success" type="submit">Get Weather</button>
-        </form>
+        <div class="row" id="submitSection">
+            <form id="weather-form" class="col-sm-6 col-sm-offset-3">
+                <h3>Please enter a city to search for</h3>
+                <input type="text" id="city" placeholder="Atlanta" />
+                <button class="btn btn-success" type="submit"data-toggle="collapse" data-target="#weather-info" aria-expanded="false" aria-controls="#weather-info">Get Weather</button>
+            </form>
 
-        <div id="weather-info" class="col-sm-12">
-            <!-- jQueer/AJAX... get us some data -->
+            <div id="weather-info" class="col-sm-6 col-sm-offset-3">
+                <!-- jQueer/AJAX... get us some data -->
+                <div id='a'>
+                    <h3> This is div a </h3>
+                    <div id='b'>
+                        <h3> This is div b </h3>
+                    </div>
+                    <div id='b2'>
+                        <h3> This is div b2 </h3>
+                    </div>
+                </div>
+                <h3>Welcome</h3>
+            </div>
+
+            <div id="forcast-info" class "col-sm-6 col-sm-offset-3"></div>
         </div>
     </div>
     
